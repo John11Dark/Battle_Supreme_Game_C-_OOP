@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DraftHA
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         //Change 1
         static Panel nextPanel;
@@ -23,8 +23,12 @@ namespace DraftHA
         static int hitPoints = 0;
         static int tempCharIndex = -1;
 
+        // Wand wand = new Wand();
+
+
+
         //Change 2
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             //--> create a warrior 

@@ -1,6 +1,6 @@
 ﻿namespace DraftHA
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlPlayerChoose = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbPgCharList = new System.Windows.Forms.TabPage();
@@ -304,8 +304,8 @@
             // 
             // picBxCharList
             // 
-            this.picBxCharList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.picBxCharList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picBxCharList.Image = global::DraftHA.Properties.Resources.images;
             this.picBxCharList.Location = new System.Drawing.Point(349, 49);
@@ -488,8 +488,8 @@
             // 
             // picBxAddChar
             // 
-            this.picBxAddChar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.picBxAddChar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picBxAddChar.Image = global::DraftHA.Properties.Resources.images;
             this.picBxAddChar.Location = new System.Drawing.Point(399, 32);
@@ -777,14 +777,14 @@
             this.imgListMageEquip.Images.SetKeyName(1, "Mother Nature.jpg");
             this.imgListMageEquip.Images.SetKeyName(2, "Ultimate Energy.jpg");
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1381, 693);
             this.Controls.Add(this.pnlPlayerChoose);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "MainForm";
             this.pnlPlayerChoose.ResumeLayout(false);
             this.pnlPlayerChoose.PerformLayout();
             this.tabControl1.ResumeLayout(false);
