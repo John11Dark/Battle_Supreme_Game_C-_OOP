@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Battle_Supreme_Game.Classes;
 
-namespace DraftHA
+namespace Battle_Supreme_Game
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         //Change 1
         static Panel nextPanel;
@@ -22,19 +24,36 @@ namespace DraftHA
 
         static int hitPoints = 0;
         static int tempCharIndex = -1;
+        static int chosenCharacterIdnex = -1;
+        static int deadCharacters = 0;
+
+        static Character temporaryCharacter;
+        static Character playerCharacter;
+        static Character randomEnemy;
+
+        static List<Character> charactersList = new List<Character>();
+
 
         //Change 2
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             //--> create a warrior 
+            Warrior warrior = new Warrior();
             //--> create a weapon
+            Weapon weapon = new Weapon("", 0);
             //--> assign the weapon to the warrior object
+            warrior.setWeapon(weapon);
             //--> add the warrior to the characters list
+            charactersList.Add(warrior);
             //--> create a mage
+            Mage mage = new Mage();
             //--> create a wand
+            Wand wand = new Wand("", 0);
             //--> assign the wand to the mage object
+            mage.setWand(wand);
             //--> add the mage to the characters list
+            charactersList.Add(mage);
         }
 
         //Change 3
@@ -46,63 +65,99 @@ namespace DraftHA
             //--> foreach Character in the characters list
             //--> add the type and the character name (formula shown in brief)
 
+            foreach (string value in charactersList.Select(character => $"{character.GetType().Name} : {character.name}"))
+            {
+                lstBxAllChars.Items.Add(value);
+            }
         }
 
         //Change 4
         private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             //The if statement is used as a Validation, to ensure that an actual character has been selected rather than an empty slot in the list box
-            if (lstBxAllChars.SelectedItem != null)
+            if (lstBxAllChars.SelectedItem == null) return;
+            string selectedItem = lstBxAllChars.SelectedItem.ToString();
+            string
+                charType = selectedItem
+                    .Split(':')[0]; //fetching the first part of the string which is the character's type
+
+            //Depending on the charType the corresponding image will be displayed in the picture box
+            switch (charType)
             {
-                string selectedItem = lstBxAllChars.SelectedItem.ToString();
-                string charType = selectedItem.Split(':')[0]; //fetching the first part of the string which is the character's type
-
-                //Depending on the charType the corresponsing image will be displayed in the picture box
-                switch (charType)
-                {
-                    case "Mage":
-                        picBxCharList.Image = imageList1.Images[0];
-                        break;
-                    case "Warrior":
-                        picBxCharList.Image = imageList1.Images[1];
-                        break;
-                }
-
-                //The index of the selected character from the list box is assigned to the tempCharIndex
-                //This index should be used to fetch the corresponding character from the characters list since the same index in the list box and the characters list is used
-                tempCharIndex = lstBxAllChars.SelectedIndex;
-                //--> Fetch the temp player Character object from the characters list using tempCharIndex
-
-                // The following labels should be assigned to the corresponding fields of the tempPlayerCharacter
-
-                //--> lblCharName.Text 
-                //--> lblCharHealth.Text 
-                //--> lblCharPoints.Text 
-                //--> lblCharLevel.Text 
-                //--> lblLoses.Text
-                //--> lblWins.Text 
-
-                //--> if tempPlayerCharacter's health is less or equal to 0 then
-                //--> btnCharChoose.Enabled = false;
-                //--> else
-                //-->  btnCharChoose.Enabled = true;
-
+                case "Mage":
+                    picBxCharList.Image = imageList1.Images[0];
+                    break;
+                case "Warrior":
+                    picBxCharList.Image = imageList1.Images[1];
+                    break;
             }
+
+            //The index of the selected character from the list box is assigned to the tempCharIndex
+            //This index should be used to fetch the corresponding character from the characters list since the same index in the list box and the characters list is used
+            tempCharIndex = lstBxAllChars.SelectedIndex;
+                
+            //--> Fetch the temp player Character object from the characters list using tempCharIndex
+            temporaryCharacter = charactersList[tempCharIndex];
+            // The following labels should be assigned to the corresponding fields of the tempPlayerCharacter
+
+            //--> lblCharName.Text 
+            lblCharName.Text = temporaryCharacter.name;
+            //--> lblCharHealth.Text 
+                
+            lblCharHealth.Text = temporaryCharacter.health.ToString();
+            //--> lblCharPoints.Text 
+            lblCharPoints.Text = temporaryCharacter.points.ToString();
+                
+            //--> lblCharLevel.Text 
+            lblCharLevel.Text = temporaryCharacter.level.ToString();
+                
+            //--> lblLoses.Text
+            lblLoses.Text = temporaryCharacter.loses.ToString();
+                
+            //--> lblWins.Text 
+            lblWins.Text = temporaryCharacter.wons.ToString();
+                
+
+            //--> if tempPlayerCharacter's health is less or equal to 0 then
+            //--> btnCharChoose.Enabled = false;
+            //--> else
+            //-->  btnCharChoose.Enabled = true;
+                
+                
+            // if (temporaryCharacter.health <= 0)
+            // {
+            //     btnCharChoose.Enabled = false;
+            // }
+            // else
+            // {
+            //    btnCharChoose.Enabled = true;
+            // }
+                
+            btnCharChoose.Enabled = temporaryCharacter.health > 0;
         }
 
         //Change 5
         private void btnCharChoose_Click(object sender, EventArgs e)
         {
             //--> set the player character object to the temp player character object
+            playerCharacter = temporaryCharacter;
             //--> set the current character index variable to the temp character index variable
+            chosenCharacterIdnex = tempCharIndex;
             btnGenRanEnemy.Enabled = true;
 
             // The following text boxes should be assigned to the corresponding fields of the Player Character object
+            
             //--> txtBxCharNameB.Text
+            txtBxCharNameB.Text = playerCharacter.name ;
+            
             //--> txtBxCharHealthB.Text
-            //--> txtBxCharPointsB.Text 
-            //--> txtBxCharLvlB.Text 
-
+            txtBxCharHealthB.Text = playerCharacter.health.ToString() ;
+            
+            //--> txtBxCharPointsB.Text
+             txtBxCharPointsB.Text = playerCharacter.points.ToString() ;
+            
+            //--> txtBxCharLvlB.Text
+             txtBxCharLvlB.Text = playerCharacter.level.ToString() ;
         }
 
         //Change 6
@@ -139,16 +194,12 @@ namespace DraftHA
         //Change 8
         private void btnGenRanEnemy_Click_1(object sender, EventArgs e)
         {
-
         }
 
         //Change 9
         private void btnFight_Click(object sender, EventArgs e)
         {
-
-
         }
-
 
 
         //No need to update
@@ -256,8 +307,6 @@ namespace DraftHA
                 pnlEquipWarrior.Visible = true;
                 pnlEquipMage.Visible = true;
             }
-
         }
-
     }
 }

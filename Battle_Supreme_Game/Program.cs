@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DraftHA
+namespace Battle_Supreme_Game
 {
     static class Program
     {

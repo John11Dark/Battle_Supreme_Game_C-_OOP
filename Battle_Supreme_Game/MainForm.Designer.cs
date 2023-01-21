@@ -1,4 +1,4 @@
-﻿namespace DraftHA
+﻿namespace Battle_Supreme_Game
 {
     partial class MainForm
     {
@@ -307,7 +307,7 @@
             this.picBxCharList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBxCharList.Image = global::DraftHA.Properties.Resources.images;
+            this.picBxCharList.Image = global::Battle_Supreme_Game.Properties.Resources.images;
             this.picBxCharList.Location = new System.Drawing.Point(349, 49);
             this.picBxCharList.Name = "picBxCharList";
             this.picBxCharList.Size = new System.Drawing.Size(489, 399);
@@ -431,7 +431,7 @@
             // 
             // picBoxWeapons
             // 
-            this.picBoxWeapons.Image = global::DraftHA.Properties.Resources.images;
+            this.picBoxWeapons.Image = global::Battle_Supreme_Game.Properties.Resources.images;
             this.picBoxWeapons.Location = new System.Drawing.Point(399, 49);
             this.picBoxWeapons.Name = "picBoxWeapons";
             this.picBoxWeapons.Size = new System.Drawing.Size(334, 350);
@@ -491,7 +491,7 @@
             this.picBxAddChar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBxAddChar.Image = global::DraftHA.Properties.Resources.images;
+            this.picBxAddChar.Image = global::Battle_Supreme_Game.Properties.Resources.images;
             this.picBxAddChar.Location = new System.Drawing.Point(399, 32);
             this.picBxAddChar.Name = "picBxAddChar";
             this.picBxAddChar.Size = new System.Drawing.Size(489, 399);
