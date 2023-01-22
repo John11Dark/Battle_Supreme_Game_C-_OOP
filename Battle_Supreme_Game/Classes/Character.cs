@@ -4,26 +4,32 @@
     {
         internal string name;
         internal int health;
-        internal int points;
         internal int level;
-        internal int wons;
-        internal int loses;
+        private int points;
+        private int victories;
+        private int loses;
 
-        public Character(string name)
+        protected Character(string name)
         {
             this.name = name;
             this.health = 100;
             this.level = 1;
             this.points = 0;
-            this.wons = 0;
+            this.victories = 0;
             this.loses = 0;
         }
 
-        public void Battle(bool win, Character opponent)
+        /// <summary>
+        /// <c>Battle</c>
+        /// This method handles the battle between the current character and an opponent character.
+        /// </summary>
+        /// <param name="isWining">A boolean indicating whether the current character wins the battle or not.</param>
+        /// <param name="opponent">The character object representing the opponent in the battle.</param>W
+        public void battle(bool isWining, Character opponent)
         {
-            if (win)
+            if (isWining)
             {
-                this.wons++;
+                this.victories++;
                 this.points = (opponent.level * 10);
                 if ((this.points % 100) == 0)
                 {
@@ -41,6 +47,21 @@
                     this.health = 0;
                 }
             }
+        }
+
+        public int getVictories()
+        {
+            return this.victories;
+        }
+
+        public int getLoses()
+        {
+            return this.loses;
+        }
+        
+        public int getPoints()
+        {
+            return this.points;
         }
     }
 }

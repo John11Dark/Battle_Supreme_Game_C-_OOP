@@ -1,4 +1,6 @@
-﻿namespace Battle_Supreme_Game.Classes
+﻿using System;
+
+namespace Battle_Supreme_Game.Classes
 {
     //Warrior 
     //  Warrior is a type of Character and has the same attributes as that of the Character as well as a Weapon attribute.  
@@ -14,36 +16,43 @@
 
     public class Warrior : Character
     {
-        private  Weapon _weapon;
-
-        public void setWeapon(Weapon weapon)
-        {
-            this._weapon = weapon;
-        }
+        private Weapon weapon;
 
         public Warrior() : base("")
         {
-            
         }
+
         public Warrior(string name) : base(name)
         {
         }
 
-        public new void Battle(bool win, Character opponent)
+        public new void battle(bool win, Character opponent)
         {
-            base.Battle(win, opponent);
+            base.battle(win, opponent);
 
             if (win)
             {
-                opponent.health -= _weapon.hitPoints;
+                opponent.health -= weapon.hitPoints;
             }
             else
             {
-                _weapon.damage += (opponent.level * 2);
-                if (_weapon.damage >= 100)
+                weapon.damage += (opponent.level * 2);
+                if (weapon.damage >= 100)
                 {
-                    _weapon.hitPoints = 0;
+                    weapon.hitPoints = 0;
                 }
+            }
+        }
+
+        public void setWeapon(Weapon weapon)
+        {
+            if (weapon != null && weapon.GetType() == typeof(Weapon))
+            {
+                this.weapon = weapon;
+            }
+            else
+            {
+                Console.WriteLine(@"weapon parameter must be a valid instance of Weapon..");
             }
         }
     }

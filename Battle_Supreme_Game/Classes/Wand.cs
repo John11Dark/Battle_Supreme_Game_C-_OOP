@@ -8,8 +8,8 @@
     /// </summary>
     public class Wand
     {
-        string name;
-        internal int hitPoints;
+        public string name;
+        public int hitPoints;
 
         /// <summary>
         ///  Method <c>Wand</c>
