@@ -1,4 +1,4 @@
-﻿namespace Battle_Supreme_Game.Classes
+﻿namespace DraftHA.Classes
 {
     /// <summary>
     /// Class <c>Wand</c>

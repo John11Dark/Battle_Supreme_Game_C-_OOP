@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Battle_Supreme_Game.Classes
+namespace DraftHA.Classes
 {
     //Warrior 
     //  Warrior is a type of Character and has the same attributes as that of the Character as well as a Weapon attribute.  

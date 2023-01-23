@@ -1,6 +1,6 @@
-﻿namespace Battle_Supreme_Game
+﻿namespace DraftHA
 {
-    partial class MainForm
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlPlayerChoose = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbPgCharList = new System.Windows.Forms.TabPage();
@@ -84,7 +84,7 @@
             this.txtBxEnemyHealthB = new System.Windows.Forms.TextBox();
             this.txtBxCharPointsB = new System.Windows.Forms.TextBox();
             this.txtBxPoints = new System.Windows.Forms.TextBox();
-            this.txtBxChartxtBxCharNameB = new System.Windows.Forms.TextBox();
+            this.txtBxCharNameB = new System.Windows.Forms.TextBox();
             this.txtBxCharHealthB = new System.Windows.Forms.TextBox();
             this.txtBxNameLabel = new System.Windows.Forms.TextBox();
             this.txtBxHealthLabel = new System.Windows.Forms.TextBox();
@@ -117,10 +117,9 @@
             this.pnlPlayerChoose.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pnlPlayerChoose.Controls.Add(this.tabControl1);
             this.pnlPlayerChoose.Controls.Add(this.lblWelcome);
-            this.pnlPlayerChoose.Location = new System.Drawing.Point(19, 10);
-            this.pnlPlayerChoose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPlayerChoose.Location = new System.Drawing.Point(25, 12);
             this.pnlPlayerChoose.Name = "pnlPlayerChoose";
-            this.pnlPlayerChoose.Size = new System.Drawing.Size(993, 544);
+            this.pnlPlayerChoose.Size = new System.Drawing.Size(1324, 669);
             this.pnlPlayerChoose.TabIndex = 0;
             // 
             // tabControl1
@@ -128,11 +127,10 @@
             this.tabControl1.Controls.Add(this.tbPgCharList);
             this.tabControl1.Controls.Add(this.tbPgNewCharacter);
             this.tabControl1.Controls.Add(this.tbPgBattle);
-            this.tabControl1.Location = new System.Drawing.Point(51, 98);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Location = new System.Drawing.Point(68, 121);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(878, 408);
+            this.tabControl1.Size = new System.Drawing.Size(1171, 502);
             this.tabControl1.TabIndex = 7;
             // 
             // tbPgCharList
@@ -154,11 +152,10 @@
             this.tbPgCharList.Controls.Add(this.btnAllChars);
             this.tbPgCharList.Controls.Add(this.lstBxAllChars);
             this.tbPgCharList.Controls.Add(this.picBxCharList);
-            this.tbPgCharList.Location = new System.Drawing.Point(4, 22);
-            this.tbPgCharList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPgCharList.Location = new System.Drawing.Point(4, 25);
             this.tbPgCharList.Name = "tbPgCharList";
-            this.tbPgCharList.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbPgCharList.Size = new System.Drawing.Size(870, 382);
+            this.tbPgCharList.Padding = new System.Windows.Forms.Padding(3);
+            this.tbPgCharList.Size = new System.Drawing.Size(1163, 473);
             this.tbPgCharList.TabIndex = 0;
             this.tbPgCharList.Text = "List of Characters";
             this.tbPgCharList.UseVisualStyleBackColor = true;
@@ -166,134 +163,120 @@
             // lblLoses
             // 
             this.lblLoses.AutoSize = true;
-            this.lblLoses.Location = new System.Drawing.Point(754, 205);
-            this.lblLoses.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLoses.Location = new System.Drawing.Point(1005, 252);
             this.lblLoses.Name = "lblLoses";
-            this.lblLoses.Size = new System.Drawing.Size(0, 13);
+            this.lblLoses.Size = new System.Drawing.Size(0, 17);
             this.lblLoses.TabIndex = 22;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(659, 205);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(879, 252);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.Size = new System.Drawing.Size(50, 17);
             this.label9.TabIndex = 21;
             this.label9.Text = "Loses:";
             // 
             // lblWins
             // 
             this.lblWins.AutoSize = true;
-            this.lblWins.Location = new System.Drawing.Point(754, 180);
-            this.lblWins.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWins.Location = new System.Drawing.Point(1005, 221);
             this.lblWins.Name = "lblWins";
-            this.lblWins.Size = new System.Drawing.Size(0, 13);
+            this.lblWins.Size = new System.Drawing.Size(0, 17);
             this.lblWins.TabIndex = 20;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(659, 180);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(879, 221);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.Size = new System.Drawing.Size(43, 17);
             this.label8.TabIndex = 19;
             this.label8.Text = "Wins:";
             // 
             // lblCharLevel
             // 
             this.lblCharLevel.AutoSize = true;
-            this.lblCharLevel.Location = new System.Drawing.Point(752, 153);
-            this.lblCharLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCharLevel.Location = new System.Drawing.Point(1002, 188);
             this.lblCharLevel.Name = "lblCharLevel";
-            this.lblCharLevel.Size = new System.Drawing.Size(0, 13);
+            this.lblCharLevel.Size = new System.Drawing.Size(0, 17);
             this.lblCharLevel.TabIndex = 18;
             // 
             // lblCharPoints
             // 
             this.lblCharPoints.AutoSize = true;
-            this.lblCharPoints.Location = new System.Drawing.Point(752, 124);
-            this.lblCharPoints.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCharPoints.Location = new System.Drawing.Point(1002, 153);
             this.lblCharPoints.Name = "lblCharPoints";
-            this.lblCharPoints.Size = new System.Drawing.Size(0, 13);
+            this.lblCharPoints.Size = new System.Drawing.Size(0, 17);
             this.lblCharPoints.TabIndex = 17;
             // 
             // lblCharHealth
             // 
             this.lblCharHealth.AutoSize = true;
-            this.lblCharHealth.Location = new System.Drawing.Point(752, 97);
-            this.lblCharHealth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCharHealth.Location = new System.Drawing.Point(1002, 119);
             this.lblCharHealth.Name = "lblCharHealth";
-            this.lblCharHealth.Size = new System.Drawing.Size(0, 13);
+            this.lblCharHealth.Size = new System.Drawing.Size(0, 17);
             this.lblCharHealth.TabIndex = 16;
             // 
             // lblCharName
             // 
             this.lblCharName.AutoSize = true;
-            this.lblCharName.Location = new System.Drawing.Point(752, 69);
-            this.lblCharName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCharName.Location = new System.Drawing.Point(1002, 85);
             this.lblCharName.Name = "lblCharName";
-            this.lblCharName.Size = new System.Drawing.Size(0, 13);
+            this.lblCharName.Size = new System.Drawing.Size(0, 17);
             this.lblCharName.TabIndex = 15;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(659, 153);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(879, 188);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 13);
+            this.label6.Size = new System.Drawing.Size(46, 17);
             this.label6.TabIndex = 14;
             this.label6.Text = "Level:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(659, 124);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(879, 153);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
+            this.label5.Size = new System.Drawing.Size(51, 17);
             this.label5.TabIndex = 13;
             this.label5.Text = "Points:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(659, 97);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(879, 119);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 12;
             this.label4.Text = "Health:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(657, 70);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(876, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 11;
             this.label3.Text = "Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(712, 30);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(949, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 10;
             this.label2.Text = "Statistics";
             // 
             // btnCharChoose
             // 
             this.btnCharChoose.Enabled = false;
-            this.btnCharChoose.Location = new System.Drawing.Point(144, 298);
-            this.btnCharChoose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCharChoose.Location = new System.Drawing.Point(192, 367);
             this.btnCharChoose.Name = "btnCharChoose";
-            this.btnCharChoose.Size = new System.Drawing.Size(94, 46);
+            this.btnCharChoose.Size = new System.Drawing.Size(126, 57);
             this.btnCharChoose.TabIndex = 9;
             this.btnCharChoose.Text = "Choose Character";
             this.btnCharChoose.UseVisualStyleBackColor = true;
@@ -301,10 +284,9 @@
             // 
             // btnAllChars
             // 
-            this.btnAllChars.Location = new System.Drawing.Point(14, 298);
-            this.btnAllChars.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAllChars.Location = new System.Drawing.Point(19, 367);
             this.btnAllChars.Name = "btnAllChars";
-            this.btnAllChars.Size = new System.Drawing.Size(122, 46);
+            this.btnAllChars.Size = new System.Drawing.Size(163, 57);
             this.btnAllChars.TabIndex = 8;
             this.btnAllChars.Text = "Show Updated Character List";
             this.btnAllChars.UseVisualStyleBackColor = true;
@@ -313,21 +295,22 @@
             // lstBxAllChars
             // 
             this.lstBxAllChars.FormattingEnabled = true;
-            this.lstBxAllChars.Location = new System.Drawing.Point(53, 40);
-            this.lstBxAllChars.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstBxAllChars.ItemHeight = 16;
+            this.lstBxAllChars.Location = new System.Drawing.Point(71, 49);
             this.lstBxAllChars.Name = "lstBxAllChars";
-            this.lstBxAllChars.Size = new System.Drawing.Size(149, 238);
+            this.lstBxAllChars.Size = new System.Drawing.Size(197, 292);
             this.lstBxAllChars.TabIndex = 7;
             this.lstBxAllChars.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
             // 
             // picBxCharList
             // 
-            this.picBxCharList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBxCharList.Image = global::Battle_Supreme_Game.Properties.Resources.images;
-            this.picBxCharList.Location = new System.Drawing.Point(262, 40);
-            this.picBxCharList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBxCharList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBxCharList.Image = global::DraftHA.Properties.Resources.images;
+            this.picBxCharList.Location = new System.Drawing.Point(349, 49);
             this.picBxCharList.Name = "picBxCharList";
-            this.picBxCharList.Size = new System.Drawing.Size(367, 327);
+            this.picBxCharList.Size = new System.Drawing.Size(489, 399);
             this.picBxCharList.TabIndex = 5;
             this.picBxCharList.TabStop = false;
             // 
@@ -339,11 +322,10 @@
             this.tbPgNewCharacter.Controls.Add(this.btnCharChoice);
             this.tbPgNewCharacter.Controls.Add(this.label1);
             this.tbPgNewCharacter.Controls.Add(this.txtBxCharName);
-            this.tbPgNewCharacter.Location = new System.Drawing.Point(4, 22);
-            this.tbPgNewCharacter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPgNewCharacter.Location = new System.Drawing.Point(4, 25);
             this.tbPgNewCharacter.Name = "tbPgNewCharacter";
-            this.tbPgNewCharacter.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbPgNewCharacter.Size = new System.Drawing.Size(870, 382);
+            this.tbPgNewCharacter.Padding = new System.Windows.Forms.Padding(3);
+            this.tbPgNewCharacter.Size = new System.Drawing.Size(1163, 473);
             this.tbPgNewCharacter.TabIndex = 1;
             this.tbPgNewCharacter.Text = "Add New Character";
             this.tbPgNewCharacter.UseVisualStyleBackColor = true;
@@ -354,10 +336,9 @@
             this.pnlEquipWarrior.Controls.Add(this.btnChooseWeapon);
             this.pnlEquipWarrior.Controls.Add(this.picBoxWeapons);
             this.pnlEquipWarrior.Controls.Add(this.groupBox2);
-            this.pnlEquipWarrior.Location = new System.Drawing.Point(4, 2);
-            this.pnlEquipWarrior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlEquipWarrior.Location = new System.Drawing.Point(6, 3);
             this.pnlEquipWarrior.Name = "pnlEquipWarrior";
-            this.pnlEquipWarrior.Size = new System.Drawing.Size(811, 375);
+            this.pnlEquipWarrior.Size = new System.Drawing.Size(1081, 461);
             this.pnlEquipWarrior.TabIndex = 7;
             this.pnlEquipWarrior.Visible = false;
             // 
@@ -366,19 +347,17 @@
             this.pnlEquipMage.Controls.Add(this.btnChooseWand);
             this.pnlEquipMage.Controls.Add(this.picBoxMageEquip);
             this.pnlEquipMage.Controls.Add(this.groupBox3);
-            this.pnlEquipMage.Location = new System.Drawing.Point(0, 2);
-            this.pnlEquipMage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlEquipMage.Location = new System.Drawing.Point(0, 3);
             this.pnlEquipMage.Name = "pnlEquipMage";
-            this.pnlEquipMage.Size = new System.Drawing.Size(861, 361);
+            this.pnlEquipMage.Size = new System.Drawing.Size(1148, 444);
             this.pnlEquipMage.TabIndex = 8;
             this.pnlEquipMage.Visible = false;
             // 
             // btnChooseWand
             // 
-            this.btnChooseWand.Location = new System.Drawing.Point(527, 152);
-            this.btnChooseWand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChooseWand.Location = new System.Drawing.Point(703, 187);
             this.btnChooseWand.Name = "btnChooseWand";
-            this.btnChooseWand.Size = new System.Drawing.Size(101, 31);
+            this.btnChooseWand.Size = new System.Drawing.Size(135, 38);
             this.btnChooseWand.TabIndex = 2;
             this.btnChooseWand.Text = "Choose Wand";
             this.btnChooseWand.UseVisualStyleBackColor = true;
@@ -386,10 +365,9 @@
             // 
             // picBoxMageEquip
             // 
-            this.picBoxMageEquip.Location = new System.Drawing.Point(297, 17);
-            this.picBoxMageEquip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBoxMageEquip.Location = new System.Drawing.Point(396, 21);
             this.picBoxMageEquip.Name = "picBoxMageEquip";
-            this.picBoxMageEquip.Size = new System.Drawing.Size(66, 332);
+            this.picBoxMageEquip.Size = new System.Drawing.Size(88, 408);
             this.picBoxMageEquip.TabIndex = 1;
             this.picBoxMageEquip.TabStop = false;
             // 
@@ -398,11 +376,9 @@
             this.groupBox3.Controls.Add(this.rdBtnMother);
             this.groupBox3.Controls.Add(this.rdBtnUltimate);
             this.groupBox3.Controls.Add(this.rdBtnDragon);
-            this.groupBox3.Location = new System.Drawing.Point(40, 97);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Location = new System.Drawing.Point(54, 119);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Size = new System.Drawing.Size(175, 148);
+            this.groupBox3.Size = new System.Drawing.Size(233, 182);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Wand Choice";
@@ -410,10 +386,9 @@
             // rdBtnMother
             // 
             this.rdBtnMother.AutoSize = true;
-            this.rdBtnMother.Location = new System.Drawing.Point(14, 69);
-            this.rdBtnMother.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnMother.Location = new System.Drawing.Point(19, 85);
             this.rdBtnMother.Name = "rdBtnMother";
-            this.rdBtnMother.Size = new System.Drawing.Size(93, 17);
+            this.rdBtnMother.Size = new System.Drawing.Size(120, 21);
             this.rdBtnMother.TabIndex = 2;
             this.rdBtnMother.TabStop = true;
             this.rdBtnMother.Text = "Mother Nature";
@@ -423,10 +398,9 @@
             // rdBtnUltimate
             // 
             this.rdBtnUltimate.AutoSize = true;
-            this.rdBtnUltimate.Location = new System.Drawing.Point(14, 46);
-            this.rdBtnUltimate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnUltimate.Location = new System.Drawing.Point(19, 57);
             this.rdBtnUltimate.Name = "rdBtnUltimate";
-            this.rdBtnUltimate.Size = new System.Drawing.Size(99, 17);
+            this.rdBtnUltimate.Size = new System.Drawing.Size(129, 21);
             this.rdBtnUltimate.TabIndex = 1;
             this.rdBtnUltimate.TabStop = true;
             this.rdBtnUltimate.Text = "Ultimate Energy";
@@ -436,10 +410,9 @@
             // rdBtnDragon
             // 
             this.rdBtnDragon.AutoSize = true;
-            this.rdBtnDragon.Location = new System.Drawing.Point(14, 24);
-            this.rdBtnDragon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnDragon.Location = new System.Drawing.Point(19, 29);
             this.rdBtnDragon.Name = "rdBtnDragon";
-            this.rdBtnDragon.Size = new System.Drawing.Size(86, 17);
+            this.rdBtnDragon.Size = new System.Drawing.Size(109, 21);
             this.rdBtnDragon.TabIndex = 0;
             this.rdBtnDragon.TabStop = true;
             this.rdBtnDragon.Text = "Dragon Claw";
@@ -448,10 +421,9 @@
             // 
             // btnChooseWeapon
             // 
-            this.btnChooseWeapon.Location = new System.Drawing.Point(649, 143);
-            this.btnChooseWeapon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChooseWeapon.Location = new System.Drawing.Point(865, 176);
             this.btnChooseWeapon.Name = "btnChooseWeapon";
-            this.btnChooseWeapon.Size = new System.Drawing.Size(86, 40);
+            this.btnChooseWeapon.Size = new System.Drawing.Size(115, 49);
             this.btnChooseWeapon.TabIndex = 9;
             this.btnChooseWeapon.Text = "Choose Weapon";
             this.btnChooseWeapon.UseVisualStyleBackColor = true;
@@ -459,11 +431,10 @@
             // 
             // picBoxWeapons
             // 
-            this.picBoxWeapons.Image = global::Battle_Supreme_Game.Properties.Resources.images;
-            this.picBoxWeapons.Location = new System.Drawing.Point(299, 40);
-            this.picBoxWeapons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBoxWeapons.Image = global::DraftHA.Properties.Resources.images;
+            this.picBoxWeapons.Location = new System.Drawing.Point(399, 49);
             this.picBoxWeapons.Name = "picBoxWeapons";
-            this.picBoxWeapons.Size = new System.Drawing.Size(250, 284);
+            this.picBoxWeapons.Size = new System.Drawing.Size(334, 350);
             this.picBoxWeapons.TabIndex = 1;
             this.picBoxWeapons.TabStop = false;
             // 
@@ -472,11 +443,9 @@
             this.groupBox2.Controls.Add(this.rdBtnKatana);
             this.groupBox2.Controls.Add(this.rdBtnHammer);
             this.groupBox2.Controls.Add(this.rdBtnAxe);
-            this.groupBox2.Location = new System.Drawing.Point(40, 97);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(54, 119);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(175, 148);
+            this.groupBox2.Size = new System.Drawing.Size(233, 182);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Weapon Choice";
@@ -484,10 +453,9 @@
             // rdBtnKatana
             // 
             this.rdBtnKatana.AutoSize = true;
-            this.rdBtnKatana.Location = new System.Drawing.Point(14, 69);
-            this.rdBtnKatana.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnKatana.Location = new System.Drawing.Point(19, 85);
             this.rdBtnKatana.Name = "rdBtnKatana";
-            this.rdBtnKatana.Size = new System.Drawing.Size(59, 17);
+            this.rdBtnKatana.Size = new System.Drawing.Size(74, 21);
             this.rdBtnKatana.TabIndex = 2;
             this.rdBtnKatana.TabStop = true;
             this.rdBtnKatana.Text = "Katana";
@@ -497,10 +465,9 @@
             // rdBtnHammer
             // 
             this.rdBtnHammer.AutoSize = true;
-            this.rdBtnHammer.Location = new System.Drawing.Point(14, 46);
-            this.rdBtnHammer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnHammer.Location = new System.Drawing.Point(19, 57);
             this.rdBtnHammer.Name = "rdBtnHammer";
-            this.rdBtnHammer.Size = new System.Drawing.Size(87, 17);
+            this.rdBtnHammer.Size = new System.Drawing.Size(112, 21);
             this.rdBtnHammer.TabIndex = 1;
             this.rdBtnHammer.TabStop = true;
             this.rdBtnHammer.Text = "War Hammer";
@@ -510,10 +477,9 @@
             // rdBtnAxe
             // 
             this.rdBtnAxe.AutoSize = true;
-            this.rdBtnAxe.Location = new System.Drawing.Point(14, 24);
-            this.rdBtnAxe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnAxe.Location = new System.Drawing.Point(19, 29);
             this.rdBtnAxe.Name = "rdBtnAxe";
-            this.rdBtnAxe.Size = new System.Drawing.Size(73, 17);
+            this.rdBtnAxe.Size = new System.Drawing.Size(92, 21);
             this.rdBtnAxe.TabIndex = 0;
             this.rdBtnAxe.TabStop = true;
             this.rdBtnAxe.Text = "Battle Axe";
@@ -522,12 +488,13 @@
             // 
             // picBxAddChar
             // 
-            this.picBxAddChar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBxAddChar.Image = global::Battle_Supreme_Game.Properties.Resources.images;
-            this.picBxAddChar.Location = new System.Drawing.Point(299, 26);
-            this.picBxAddChar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBxAddChar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBxAddChar.Image = global::DraftHA.Properties.Resources.images;
+            this.picBxAddChar.Location = new System.Drawing.Point(399, 32);
             this.picBxAddChar.Name = "picBxAddChar";
-            this.picBxAddChar.Size = new System.Drawing.Size(367, 327);
+            this.picBxAddChar.Size = new System.Drawing.Size(489, 399);
             this.picBxAddChar.TabIndex = 4;
             this.picBxAddChar.TabStop = false;
             // 
@@ -535,11 +502,9 @@
             // 
             this.groupBox1.Controls.Add(this.rdBtnWarrior);
             this.groupBox1.Controls.Add(this.rdBtnMage);
-            this.groupBox1.Location = new System.Drawing.Point(64, 81);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(85, 100);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(130, 115);
+            this.groupBox1.Size = new System.Drawing.Size(174, 142);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Characters";
@@ -547,10 +512,9 @@
             // rdBtnWarrior
             // 
             this.rdBtnWarrior.AutoSize = true;
-            this.rdBtnWarrior.Location = new System.Drawing.Point(14, 49);
-            this.rdBtnWarrior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnWarrior.Location = new System.Drawing.Point(19, 60);
             this.rdBtnWarrior.Name = "rdBtnWarrior";
-            this.rdBtnWarrior.Size = new System.Drawing.Size(59, 17);
+            this.rdBtnWarrior.Size = new System.Drawing.Size(76, 21);
             this.rdBtnWarrior.TabIndex = 2;
             this.rdBtnWarrior.Text = "Warrior";
             this.rdBtnWarrior.UseVisualStyleBackColor = true;
@@ -559,10 +523,9 @@
             // rdBtnMage
             // 
             this.rdBtnMage.AutoSize = true;
-            this.rdBtnMage.Location = new System.Drawing.Point(14, 18);
-            this.rdBtnMage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdBtnMage.Location = new System.Drawing.Point(19, 22);
             this.rdBtnMage.Name = "rdBtnMage";
-            this.rdBtnMage.Size = new System.Drawing.Size(52, 17);
+            this.rdBtnMage.Size = new System.Drawing.Size(64, 21);
             this.rdBtnMage.TabIndex = 0;
             this.rdBtnMage.Text = "Mage";
             this.rdBtnMage.UseVisualStyleBackColor = true;
@@ -570,10 +533,9 @@
             // 
             // btnCharChoice
             // 
-            this.btnCharChoice.Location = new System.Drawing.Point(47, 327);
-            this.btnCharChoice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCharChoice.Location = new System.Drawing.Point(63, 403);
             this.btnCharChoice.Name = "btnCharChoice";
-            this.btnCharChoice.Size = new System.Drawing.Size(106, 32);
+            this.btnCharChoice.Size = new System.Drawing.Size(142, 39);
             this.btnCharChoice.TabIndex = 6;
             this.btnCharChoice.Text = "Create";
             this.btnCharChoice.UseVisualStyleBackColor = true;
@@ -582,29 +544,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 236);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(24, 291);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.Size = new System.Drawing.Size(119, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Character Name: ";
             // 
             // txtBxCharName
             // 
-            this.txtBxCharName.Location = new System.Drawing.Point(112, 234);
-            this.txtBxCharName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxCharName.Location = new System.Drawing.Point(149, 288);
             this.txtBxCharName.Name = "txtBxCharName";
-            this.txtBxCharName.Size = new System.Drawing.Size(141, 20);
+            this.txtBxCharName.Size = new System.Drawing.Size(187, 22);
             this.txtBxCharName.TabIndex = 13;
             // 
             // tbPgBattle
             // 
             this.tbPgBattle.Controls.Add(this.pnlBattle);
-            this.tbPgBattle.Location = new System.Drawing.Point(4, 22);
-            this.tbPgBattle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPgBattle.Location = new System.Drawing.Point(4, 25);
             this.tbPgBattle.Name = "tbPgBattle";
-            this.tbPgBattle.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbPgBattle.Size = new System.Drawing.Size(870, 382);
+            this.tbPgBattle.Padding = new System.Windows.Forms.Padding(3);
+            this.tbPgBattle.Size = new System.Drawing.Size(1163, 473);
             this.tbPgBattle.TabIndex = 2;
             this.tbPgBattle.Text = "Battle";
             this.tbPgBattle.UseVisualStyleBackColor = true;
@@ -616,19 +575,17 @@
             this.pnlBattle.Controls.Add(this.tableLayoutPanel1);
             this.pnlBattle.Controls.Add(this.label7);
             this.pnlBattle.Controls.Add(this.btnGenRanEnemy);
-            this.pnlBattle.Location = new System.Drawing.Point(-24, -48);
-            this.pnlBattle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlBattle.Location = new System.Drawing.Point(-32, -59);
             this.pnlBattle.Name = "pnlBattle";
-            this.pnlBattle.Size = new System.Drawing.Size(920, 479);
+            this.pnlBattle.Size = new System.Drawing.Size(1227, 590);
             this.pnlBattle.TabIndex = 2;
             // 
             // btnFight
             // 
             this.btnFight.Enabled = false;
-            this.btnFight.Location = new System.Drawing.Point(700, 150);
-            this.btnFight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFight.Location = new System.Drawing.Point(934, 185);
             this.btnFight.Name = "btnFight";
-            this.btnFight.Size = new System.Drawing.Size(82, 46);
+            this.btnFight.Size = new System.Drawing.Size(110, 56);
             this.btnFight.TabIndex = 6;
             this.btnFight.Text = "Fight!";
             this.btnFight.UseVisualStyleBackColor = true;
@@ -639,8 +596,8 @@
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.50388F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.49612F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel1.Controls.Add(this.txtBxEnemyLvlB, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtBxCharLvlB, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtBxEnemyPointsB, 2, 2);
@@ -649,44 +606,40 @@
             this.tableLayoutPanel1.Controls.Add(this.txtBxEnemyHealthB, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtBxCharPointsB, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtBxPoints, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtBxChartxtBxCharNameB, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtBxCharNameB, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtBxCharHealthB, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtBxNameLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtBxHealthLabel, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(226, 70);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(301, 86);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.28318F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.71682F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(374, 153);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(498, 188);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // txtBxEnemyLvlB
             // 
-            this.txtBxEnemyLvlB.Location = new System.Drawing.Point(281, 94);
-            this.txtBxEnemyLvlB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxEnemyLvlB.Location = new System.Drawing.Point(376, 116);
             this.txtBxEnemyLvlB.Name = "txtBxEnemyLvlB";
-            this.txtBxEnemyLvlB.Size = new System.Drawing.Size(60, 20);
+            this.txtBxEnemyLvlB.Size = new System.Drawing.Size(79, 22);
             this.txtBxEnemyLvlB.TabIndex = 11;
             this.txtBxEnemyLvlB.Text = "Level";
             // 
             // txtBxCharLvlB
             // 
-            this.txtBxCharLvlB.Location = new System.Drawing.Point(281, 35);
-            this.txtBxCharLvlB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxCharLvlB.Location = new System.Drawing.Point(376, 44);
             this.txtBxCharLvlB.Name = "txtBxCharLvlB";
-            this.txtBxCharLvlB.Size = new System.Drawing.Size(60, 20);
+            this.txtBxCharLvlB.Size = new System.Drawing.Size(79, 22);
             this.txtBxCharLvlB.TabIndex = 11;
             this.txtBxCharLvlB.Text = "Level";
             // 
             // txtBxEnemyPointsB
             // 
-            this.txtBxEnemyPointsB.Location = new System.Drawing.Point(205, 94);
-            this.txtBxEnemyPointsB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxEnemyPointsB.Location = new System.Drawing.Point(274, 116);
             this.txtBxEnemyPointsB.Name = "txtBxEnemyPointsB";
-            this.txtBxEnemyPointsB.Size = new System.Drawing.Size(60, 20);
+            this.txtBxEnemyPointsB.Size = new System.Drawing.Size(79, 22);
             this.txtBxEnemyPointsB.TabIndex = 10;
             this.txtBxEnemyPointsB.Text = "Points";
             // 
@@ -694,37 +647,33 @@
             // 
             this.txtBxLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxLevel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtBxLevel.Location = new System.Drawing.Point(281, 2);
-            this.txtBxLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxLevel.Location = new System.Drawing.Point(376, 3);
             this.txtBxLevel.Name = "txtBxLevel";
-            this.txtBxLevel.Size = new System.Drawing.Size(60, 23);
+            this.txtBxLevel.Size = new System.Drawing.Size(79, 26);
             this.txtBxLevel.TabIndex = 7;
             this.txtBxLevel.Text = "Level";
             // 
             // txtBxEnemyNameB
             // 
-            this.txtBxEnemyNameB.Location = new System.Drawing.Point(2, 94);
-            this.txtBxEnemyNameB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxEnemyNameB.Location = new System.Drawing.Point(3, 116);
             this.txtBxEnemyNameB.Name = "txtBxEnemyNameB";
-            this.txtBxEnemyNameB.Size = new System.Drawing.Size(120, 20);
+            this.txtBxEnemyNameB.Size = new System.Drawing.Size(158, 22);
             this.txtBxEnemyNameB.TabIndex = 8;
             this.txtBxEnemyNameB.Text = "Name";
             // 
             // txtBxEnemyHealthB
             // 
-            this.txtBxEnemyHealthB.Location = new System.Drawing.Point(135, 94);
-            this.txtBxEnemyHealthB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxEnemyHealthB.Location = new System.Drawing.Point(181, 116);
             this.txtBxEnemyHealthB.Name = "txtBxEnemyHealthB";
-            this.txtBxEnemyHealthB.Size = new System.Drawing.Size(60, 20);
+            this.txtBxEnemyHealthB.Size = new System.Drawing.Size(79, 22);
             this.txtBxEnemyHealthB.TabIndex = 9;
             this.txtBxEnemyHealthB.Text = "Health";
             // 
             // txtBxCharPointsB
             // 
-            this.txtBxCharPointsB.Location = new System.Drawing.Point(205, 35);
-            this.txtBxCharPointsB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxCharPointsB.Location = new System.Drawing.Point(274, 44);
             this.txtBxCharPointsB.Name = "txtBxCharPointsB";
-            this.txtBxCharPointsB.Size = new System.Drawing.Size(60, 20);
+            this.txtBxCharPointsB.Size = new System.Drawing.Size(79, 22);
             this.txtBxCharPointsB.TabIndex = 10;
             this.txtBxCharPointsB.Text = "Points";
             // 
@@ -732,28 +681,25 @@
             // 
             this.txtBxPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxPoints.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtBxPoints.Location = new System.Drawing.Point(205, 2);
-            this.txtBxPoints.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxPoints.Location = new System.Drawing.Point(274, 3);
             this.txtBxPoints.Name = "txtBxPoints";
-            this.txtBxPoints.Size = new System.Drawing.Size(60, 23);
+            this.txtBxPoints.Size = new System.Drawing.Size(79, 26);
             this.txtBxPoints.TabIndex = 6;
             this.txtBxPoints.Text = "Points";
             // 
-            // txtBxChartxtBxCharNameB
+            // txtBxCharNameB
             // 
-            this.txtBxChartxtBxCharNameB.Location = new System.Drawing.Point(2, 35);
-            this.txtBxChartxtBxCharNameB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtBxChartxtBxCharNameB.Name = "txtBxChartxtBxCharNameB";
-            this.txtBxChartxtBxCharNameB.Size = new System.Drawing.Size(120, 20);
-            this.txtBxChartxtBxCharNameB.TabIndex = 8;
-            this.txtBxChartxtBxCharNameB.Text = "Name";
+            this.txtBxCharNameB.Location = new System.Drawing.Point(3, 44);
+            this.txtBxCharNameB.Name = "txtBxCharNameB";
+            this.txtBxCharNameB.Size = new System.Drawing.Size(158, 22);
+            this.txtBxCharNameB.TabIndex = 8;
+            this.txtBxCharNameB.Text = "Name";
             // 
             // txtBxCharHealthB
             // 
-            this.txtBxCharHealthB.Location = new System.Drawing.Point(135, 35);
-            this.txtBxCharHealthB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxCharHealthB.Location = new System.Drawing.Point(181, 44);
             this.txtBxCharHealthB.Name = "txtBxCharHealthB";
-            this.txtBxCharHealthB.Size = new System.Drawing.Size(60, 20);
+            this.txtBxCharHealthB.Size = new System.Drawing.Size(79, 22);
             this.txtBxCharHealthB.TabIndex = 9;
             this.txtBxCharHealthB.Text = "Health";
             // 
@@ -761,10 +707,9 @@
             // 
             this.txtBxNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxNameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtBxNameLabel.Location = new System.Drawing.Point(2, 2);
-            this.txtBxNameLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxNameLabel.Location = new System.Drawing.Point(3, 3);
             this.txtBxNameLabel.Name = "txtBxNameLabel";
-            this.txtBxNameLabel.Size = new System.Drawing.Size(120, 23);
+            this.txtBxNameLabel.Size = new System.Drawing.Size(158, 26);
             this.txtBxNameLabel.TabIndex = 0;
             this.txtBxNameLabel.Text = "Name";
             // 
@@ -772,30 +717,27 @@
             // 
             this.txtBxHealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxHealthLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtBxHealthLabel.Location = new System.Drawing.Point(135, 2);
-            this.txtBxHealthLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBxHealthLabel.Location = new System.Drawing.Point(181, 3);
             this.txtBxHealthLabel.Name = "txtBxHealthLabel";
-            this.txtBxHealthLabel.Size = new System.Drawing.Size(60, 23);
+            this.txtBxHealthLabel.Size = new System.Drawing.Size(79, 26);
             this.txtBxHealthLabel.TabIndex = 4;
             this.txtBxHealthLabel.Text = "Health";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(69, 110);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(92, 135);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 13);
+            this.label7.Size = new System.Drawing.Size(164, 17);
             this.label7.TabIndex = 2;
             this.label7.Text = "Your Chosen Character: ";
             // 
             // btnGenRanEnemy
             // 
             this.btnGenRanEnemy.Enabled = false;
-            this.btnGenRanEnemy.Location = new System.Drawing.Point(71, 150);
-            this.btnGenRanEnemy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGenRanEnemy.Location = new System.Drawing.Point(95, 185);
             this.btnGenRanEnemy.Name = "btnGenRanEnemy";
-            this.btnGenRanEnemy.Size = new System.Drawing.Size(123, 46);
+            this.btnGenRanEnemy.Size = new System.Drawing.Size(164, 57);
             this.btnGenRanEnemy.TabIndex = 1;
             this.btnGenRanEnemy.Text = "Generate a random enemy";
             this.btnGenRanEnemy.UseVisualStyleBackColor = true;
@@ -805,10 +747,9 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Franklin Gothic Medium", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(228, 41);
-            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWelcome.Location = new System.Drawing.Point(304, 51);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(601, 41);
+            this.lblWelcome.Size = new System.Drawing.Size(729, 50);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome to Dungeons and Dragons!";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -836,15 +777,14 @@
             this.imgListMageEquip.Images.SetKeyName(1, "Mother Nature.jpg");
             this.imgListMageEquip.Images.SetKeyName(2, "Ultimate Energy.jpg");
             // 
-            // MainForm
+            // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 563);
+            this.ClientSize = new System.Drawing.Size(1381, 693);
             this.Controls.Add(this.pnlPlayerChoose);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Name = "Form1";
+            this.Text = "Form1";
             this.pnlPlayerChoose.ResumeLayout(false);
             this.pnlPlayerChoose.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -870,6 +810,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -931,7 +872,7 @@
         private System.Windows.Forms.TextBox txtBxEnemyHealthB;
         private System.Windows.Forms.TextBox txtBxCharPointsB;
         private System.Windows.Forms.TextBox txtBxPoints;
-        private System.Windows.Forms.TextBox txtBxChartxtBxCharNameB;
+        private System.Windows.Forms.TextBox txtBxCharNameB;
         private System.Windows.Forms.TextBox txtBxCharHealthB;
         private System.Windows.Forms.Button btnFight;
         private System.Windows.Forms.Label lblLoses;

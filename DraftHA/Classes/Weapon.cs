@@ -1,4 +1,4 @@
-﻿namespace Battle_Supreme_Game.Classes
+﻿namespace DraftHA.Classes
 {
     public class Weapon
     {
@@ -10,7 +10,7 @@
         {
             this.name = "";
             this.hitPoints = 0;
-            this.damage = 0; 
+            this.damage = 0;
         }
         public Weapon(string name, int hitPoints)
         {

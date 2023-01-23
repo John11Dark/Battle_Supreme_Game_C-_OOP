@@ -1,4 +1,4 @@
-﻿namespace Battle_Supreme_Game.Classes
+﻿namespace DraftHA.Classes
 {
     public class Character
     {
@@ -30,7 +30,7 @@
             if (isWining)
             {
                 this.victories++;
-                this.points = (opponent.level * 10);
+                setPoints(opponent.level * 10);
                 if ((this.points % 100) == 0)
                 {
                     this.level++;
@@ -58,10 +58,15 @@
         {
             return this.loses;
         }
-        
+
         public int getPoints()
         {
             return this.points;
+        }
+
+        public void setPoints(int points)
+        {
+            this.points = points;
         }
     }
 }

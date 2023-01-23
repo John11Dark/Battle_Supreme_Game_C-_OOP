@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Battle_Supreme_Game.Classes
+namespace DraftHA.Classes
 {
     public class Mage : Character
     {
@@ -8,7 +8,7 @@ namespace Battle_Supreme_Game.Classes
         private int powerLevel;
         private int currentStamina;
         private readonly Random _random = new Random();
-        
+
         public Mage() : base("")
         {
             this.powerLevel = _random.Next(0, 5);

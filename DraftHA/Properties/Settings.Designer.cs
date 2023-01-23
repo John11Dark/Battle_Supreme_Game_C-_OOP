@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Battle_Supreme_Game.Properties
+namespace DraftHA.Properties
 {
 
 
