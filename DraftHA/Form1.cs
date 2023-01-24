@@ -41,7 +41,7 @@ namespace DraftHA
             //--> create a warrior 
             Warrior warrior = new Warrior("Sword Master");
             //--> create a weapon
-            Weapon weapon = new Weapon("Battle axe", hitPoints);
+            Weapon weapon = new Weapon("battle axe", hitPoints);
             //--> assign the weapon to the warrior object
             warrior.setWeapon(weapon);
             //--> add the warrior to the characters list
@@ -248,13 +248,13 @@ namespace DraftHA
 
             if (playerRange >= randomRange)
             {
-                playerCharacter.Battle(true, enemyCharacter);
-                enemyCharacter.Battle(false, playerCharacter);
+                playerCharacter.battle(true, enemyCharacter);
+                enemyCharacter.battle(false, playerCharacter);
             }
             else
             {
-                playerCharacter.Battle(false, enemyCharacter);
-                enemyCharacter.Battle(true, playerCharacter);
+                playerCharacter.battle(false, enemyCharacter);
+                enemyCharacter.battle(true, playerCharacter);
             }
 
 
@@ -367,12 +367,12 @@ namespace DraftHA
 
         private void rdBtnAxe_CheckedChanged_1(object sender, EventArgs e)
         {
-            //If the Battle Axe radio button is checked then
-            //the picture box should show the first image in the imgListMageEquip since it's a Battle Axe image
+            //If the battle Axe radio button is checked then
+            //the picture box should show the first image in the imgListMageEquip since it's a battle Axe image
             picBoxWeapons.Image = weaponImageList.Images[0];
 
-            //Set the variables with the details for Battle Axe to be used when the weapon is then created
-            weaponName = "Battle Axe";
+            //Set the variables with the details for battle Axe to be used when the weapon is then created
+            weaponName = "battle Axe";
             hitPoints = 10;
         }
 

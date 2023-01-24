@@ -1,20 +1,16 @@
 ﻿namespace DraftHA.Classes
 {
-    /// <summary>
-    /// Class <c>Wand</c>
-    /// <example>
-    /// Wand wand = new Wand("name");
-    /// </example>
-    /// </summary>
     public class Wand
     {
         public string name;
         public int hitPoints;
 
         /// <summary>
-        ///  Method <c>Wand</c>
-        /// /// <param name="name"> string</param>
+        /// <c>Wand</c>
+        /// This constructor takes in a name and hitPoints as arguments, and sets the name and hitPoints properties accordingly.
         /// </summary>
+        /// <param type="string" name="name">The name of the Wand.</param>
+        /// <param type="int" name="hitPoints">The hitPoints of the Wand.</param>
         public Wand(string name, int hitPoints)
         {
             this.name = name;

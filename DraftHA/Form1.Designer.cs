@@ -482,7 +482,7 @@
             this.rdBtnAxe.Size = new System.Drawing.Size(92, 21);
             this.rdBtnAxe.TabIndex = 0;
             this.rdBtnAxe.TabStop = true;
-            this.rdBtnAxe.Text = "Battle Axe";
+            this.rdBtnAxe.Text = "battle Axe";
             this.rdBtnAxe.UseVisualStyleBackColor = true;
             this.rdBtnAxe.CheckedChanged += new System.EventHandler(this.rdBtnAxe_CheckedChanged_1);
             // 
@@ -565,7 +565,7 @@
             this.tbPgBattle.Padding = new System.Windows.Forms.Padding(3);
             this.tbPgBattle.Size = new System.Drawing.Size(1163, 473);
             this.tbPgBattle.TabIndex = 2;
-            this.tbPgBattle.Text = "Battle";
+            this.tbPgBattle.Text = "battle";
             this.tbPgBattle.UseVisualStyleBackColor = true;
             // 
             // pnlBattle
