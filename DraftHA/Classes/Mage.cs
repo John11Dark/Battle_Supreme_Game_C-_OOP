@@ -51,13 +51,13 @@ namespace DraftHA.Classes
         /// <param name="wand">The wand to be set for the mage.</param>
         public void setWand(Wand wand)
         {
-            if (wand != null && wand.GetType() == typeof(Wand))
+            if (wand.GetType() == typeof(Wand))
             {
                 this.wand = wand;
             }
             else
             {
-                Console.WriteLine(@"Wand parameter must be a valid instance of Wand..");
+                throw new ArgumentException("wand parameter must be a valid instance of Wand..");
             }
         }
 

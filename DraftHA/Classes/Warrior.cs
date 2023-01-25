@@ -55,13 +55,13 @@ namespace DraftHA.Classes
         /// <param type="Weapon" name="weapon">The weapon instance to be set for the warrior.</param>
         public void setWeapon(Weapon weapon)
         {
-            if (weapon != null && weapon.GetType() == typeof(Weapon))
+            if (weapon.GetType() == typeof(Weapon))
             {
                 this.weapon = weapon;
             }
             else
             {
-                Console.WriteLine(@"weapon parameter must be a valid instance of Weapon..");
+                throw new ArgumentException("weapon parameter must be a valid instance of Weapon..");
             }
         }
     }

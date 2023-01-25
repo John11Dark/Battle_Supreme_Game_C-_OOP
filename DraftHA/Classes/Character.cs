@@ -77,29 +77,19 @@
         /// Gets the number of victories of the character.
         /// </summary>
         /// <returns>An integer representing the number of victories.</returns>
-        public int getVictories()
-        {
-            return this.victories;
-        }
+        public int getVictories() => this.victories;
 
         /// <summary>
         /// Gets the number of loses of the character.
         /// </summary>
         /// <returns>An integer representing the number of loses.</returns>
-        public int getLoses()
-        {
-            return this.loses;
-        }
+        public int getLoses() => this.loses;
 
         /// <summary>
         /// Gets the number of points of the character.
         /// </summary>
         /// <returns>An integer representing the number of points.</returns>
-        public int getPoints()
-        {
-            return this.points;
-
-        }
+        public int getPoints() => this.points;
 
         /// <summary>
         /// set the points of the character.

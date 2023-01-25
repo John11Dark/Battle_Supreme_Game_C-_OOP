@@ -12,7 +12,6 @@ namespace DraftHA
     public partial class Form1 : Form
     {
         //Change 1
-        //Change 1
         static Panel nextPanel;
 
         static string nextPanelStr = "";
@@ -20,9 +19,10 @@ namespace DraftHA
         static string weaponName = "";
         static string newCharName = "";
 
+        // ? i set a value of 6 instead of 0 for hit points cause it's never used in the global scope. so i make benefit of it
         static int hitPoints = 6;
         static int tempCharIndex = -1;
-        static int chosenCharacterIdnex = -1;
+        static int chosenCharacterIndex = -1;
         static int randomIndex = -1;
         static int deadCharacters = 0;
 
@@ -85,7 +85,7 @@ namespace DraftHA
         {
             //The if statement is used as a Validation, to ensure that an actual character has been selected rather than an empty slot in the list box
             if (lstBxAllChars.SelectedItem == null) return;
-            // ? instead of wrapping all code inside if statment just check if the charcter is equal to null return its a cleaner way
+            // ? instead of wrapping all code inside if statement just check if the character is equal to null return its a cleaner way
             string selectedItem = lstBxAllChars.SelectedItem.ToString();
             string
                 charType = selectedItem
@@ -152,7 +152,7 @@ namespace DraftHA
             //--> set the player character object to the temp player character object
             playerCharacter = temporaryCharacter;
             //--> set the current character index variable to the temp character index variable
-            chosenCharacterIdnex = tempCharIndex;
+            chosenCharacterIndex = tempCharIndex;
             btnGenRanEnemy.Enabled = true;
 
             // The following text boxes should be assigned to the corresponding fields of the Player Character object
@@ -227,7 +227,7 @@ namespace DraftHA
             {
                 randomIndex = random.Next(0, charactersList.Count);
                 enemyCharacter = charactersList[randomIndex];
-            } while (randomIndex == chosenCharacterIdnex || enemyCharacter.health <= 0);
+            } while (randomIndex == chosenCharacterIndex || enemyCharacter.health <= 0);
 
             btnFight.Enabled = true;
 
@@ -285,7 +285,7 @@ namespace DraftHA
             //newCharName is assigned with the text inserted in the text box used for the user to write the new character's name
             if (txtBxCharName.Text.Length == 0 || !Regex.IsMatch(txtBxCharName.Text, @"^[a-zA-Z\s]+$"))
             {
-                MessageBox.Show("Character name can not be left empty! and must contain only letters", "Error",
+                MessageBox.Show(@"Character name can not be left empty! and must contain only letters", @"Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtBxCharName.BackColor = Color.Firebrick;
                 txtBxCharName.Focus();
