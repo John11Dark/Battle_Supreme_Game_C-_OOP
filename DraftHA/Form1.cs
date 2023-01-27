@@ -61,8 +61,8 @@ namespace DraftHA
         {
             if (charactersList.Count <= 0)
             {
-                MessageBox.Show(@"You must create a character first!", @"Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(@"You must create a character first!", @"Info",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -220,7 +220,9 @@ namespace DraftHA
         //Change 8
         private void btnGenRanEnemy_Click_1(object sender, EventArgs e)
         {
+            // Ignores what is after this statement
             if (charactersList.Count <= deadCharacters || playerCharacter.health <= 0) return;
+
 
 
             do
@@ -274,7 +276,15 @@ namespace DraftHA
             if (playerCharacter.health <= 0 || enemyCharacter.health <= 0)
             {
                 btnFight.Enabled = false;
+
                 deadCharacters++;
+                if (charactersList.Count <= deadCharacters && enemyCharacter.health <= 0)
+                {
+                    // ? This is added to inform the user and don not make the app crash 
+                    MessageBox.Show(@"You must create a new enemy first to proceed!", @"Choose a new enemy",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnGenRanEnemy.Enabled = false;
+                }
             }
 
         }
@@ -305,6 +315,11 @@ namespace DraftHA
                     pnlEquipMage.Visible = true;
                 }
             }
+        }
+
+        private void btkPnlClick(object sender, EventArgs e)
+        {
+            if (playerCharacter != null && charactersList.Count >= deadCharacters && playerCharacter.health >= 0) btnGenRanEnemy.Enabled = true;
         }
 
         //No need to update
@@ -397,6 +412,5 @@ namespace DraftHA
             weaponName = "Katana";
             hitPoints = 20;
         }
-
     }
 }
